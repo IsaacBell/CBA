@@ -1,0 +1,13 @@
+{:uriI"‹file://app/assets/fonts/montserrat/generator_config.txt?type=text/plain&id=74842d8536746cc5350f3e060e3e1067cca1e96c9ffe172ad2e24ce3f2ccb72e:ET:load_pathI"app/assets/fonts;T:filenameI"5app/assets/fonts/montserrat/generator_config.txt;T:	nameI" montserrat/generator_config;T:logical_pathI"$montserrat/generator_config.txt;T:content_typeI"text/plain;T:sourceI"
+# Font Squirrel Font-face Generator Configuration File
+# Upload this file to the generator to recreate the settings
+# you used to create these fonts.
+
+{"mode":"optimal","formats":["ttf","woff","eotz"],"tt_instructor":"default","fix_vertical_metrics":"Y","fix_gasp":"xy","add_spaces":"Y","add_hyphens":"Y","fallback":"none","fallback_custom":"100","options_subset":"basic","subset_custom":"","subset_custom_range":"","css_stylesheet":"stylesheet.css","filename_suffix":"-webfont","emsquare":"2048","spacing_adjustment":"0"};T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"4processors:type=text/plain&file_type=text/plain;TTI"Cfile-digest://app/assets/fonts/montserrat/generator_config.txt;TTF:charsetI"
+utf-8;F:digest"%òa¥ìíÔ7ìÓ8&R¸’¼PÀ~~q:ÀÉš¯	Õ6Wá:lengthi
+:dependencies_digest"%ðØ?³jAogì
+X,µ>B÷$ÿR*¼>
+ËY?[L]:idI"E74842d8536746cc5350f3e060e3e1067cca1e96c9ffe172ad2e24ce3f2ccb72e;F:
+mtimel+biX

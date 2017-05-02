@@ -1,0 +1,58 @@
+<style>
+  .ctr {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+
+<div class="breadcrumb-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <h1 class="breadcrumb-page-title">PhD Students</h1>
+      </div> <!-- .col-md-6 -->
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <ol class="breadcrumb">
+          <li><%= link_to 'Home', root_path %></li>
+          <li>PhD Students</li>
+        </ol>
+      </div> <!-- .col-md-6 -->
+    </div> <!-- .row -->
+  </div> <!-- .container -->
+</div>
+<section class="site-content">
+  <div class="container">
+    <div class="row">
+    
+      <% @phd_students.each do |u| %>
+              <div class="col-md-3">
+                <div class="content-box box-img bg-light text-center" style="min-height: 370px !important;padding:10px;">
+
+                  <% if u.photo.present? %>
+                      <%= image_tag u.photo.directory.url, class:'img-responsive thumbnail ctr', size: '124x136' %>
+                  <% else %>
+                      <%= image_tag('/assets/no-pic.png', class: 'img-responsive thumbnail ctr', size: '124x136', alt: 'The University of Alabama') %>
+                  <% end %>
+
+                  <div class="box-body">
+                    <h3 class="no-bottom-spacing"><%= u.name %></h3>
+
+                    <div class="divider-light faded-both"></div>
+                    <% if u.program.present? %>
+                        <p class="small"><%= u.program %></p>
+                    <% end %>
+
+                    <% if u.descriptor.present? %>
+                        <p class="small"><%= u.descriptor %></p>
+                    <% end %>
+
+                    <p class="small"> <a href="<%= phd_profile_path(u) %>" class="btn btn-transparent-v2"> View Student Profile</a></p>
+                  </div> <!-- .box-body -->
+                </div> <!-- .content-box -->
+              </div> <!-- .col-md-3 -->
+          <% end %>
+    </div> <!-- .row -->
+
+  </div> <!-- .container -->
+</section>

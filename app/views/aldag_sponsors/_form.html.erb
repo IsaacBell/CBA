@@ -1,0 +1,19 @@
+<%= simple_form_for @aldag_sponsor,:method => :post, :url => sponsorship_request_path, html: { class: 'form-horizontal' },
+                    wrapper: :horizontal_form,
+                    wrapper_mappings: {
+                        check_boxes: :horizontal_radio_and_checkboxes,
+                        radio_buttons: :horizontal_radio_and_checkboxes,
+                        file: :horizontal_file_input,
+                        boolean: :horizontal_boolean
+                    } do |f| %>
+    <%= f.input :firstname, :required => true, :label => "First Name" %>
+    <%= f.input :lastname, :required => true, :label => "Last Name" %>
+    <%= f.input :email, :required => true, :label => "Email Address" %>
+    <%= f.input :phone, :label => "Phone" %>
+    <div>
+      </br>
+      <%= recaptcha_tags %>
+      </br>
+      <%= f.button :submit, 'Submit Information', :class=> "btn-crimson btn-md" %>
+    </div>
+<% end %>

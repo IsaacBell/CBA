@@ -1,0 +1,52 @@
+<% if @page.desc.present? %>
+
+    <section class="site-top <%= @page.bgstyle.present? ? @page.bgstyle : '' %>" id="item-0" style="<%= (@page.bgstyle.present? && bgstylecheck(@page.bgstyle) != "0") ? "background-image: url('#{@page.desc_bg_image.url}');background-size: cover;background-repeat: no-repeat;background-position: 50% 50%;".html_safe : '' %>">
+
+      <div class="container">
+        <div class="row">
+          <%= raw(@page.desc) %><br><br>
+        </div>
+      </div>
+    </section>
+
+<% end %>
+
+<% @page.sections.published.order('position ASC').each_with_index do |section, index| %>
+    <% indexplusone = index + 1 %>
+    <% if index == 0 && section.fullslides.present? %>
+
+        <section class="site-top" id="item-<%= indexplusone %>" style="margin-top: -70px;" >
+          <%= render 'pages/fullslides', :section => section %>
+        </section>
+
+    <% elsif index != 0 && section.fullslides.present? %>
+
+        <section class="site-content <%= section.bgstyle.present? ? section.bgstyle : '' %>" id="item-<%= indexplusone %>" style="<%= (bgstylecheck(section.bgstyle) != "0" ) ? "background-image: url('#{section.section_bg_image.url}');background-size: cover;background-repeat: no-repeat;background-position: 50% 50%;".html_safe : '' %>" >
+          <%= render 'pages/fullslides', :section => section %>
+        </section>
+
+    <% else %>
+
+        <section class="<%= (indexplusone == 0)? "site-top" : "site-content" %> <%= section.bgstyle.present? ? section.bgstyle : '' %>" id="item-<%= indexplusone %>" style="<%= (bgstylecheck(section.bgstyle) != "0") ? "background-image: url('#{section.section_bg_image.url}');background-size: cover;background-repeat: no-repeat;background-position: 50% 50%;".html_safe : '' %>" >
+          <div class="container">
+            <div class="row">
+              <% if section.showtitle.present? %>
+                  <h2 class="page-header"> <%= section.title %> </h2>
+              <% end %>
+              <%= render 'pages/texts', :section => section if section.texts.present? %>
+              <%= render 'pages/accordions', :section => section if section.accordions.present? %>
+              <%= render 'pages/carousels', :section => section if section.carousels.present? %>
+              <%= render 'pages/galleries', :section => section if section.galleries.present? %>
+              <%= render 'pages/iconboxes', :section => section if section.iconboxes.present? %>
+              <%= render 'pages/imageboxes', :section => section if section.imageboxes.present? %>
+              <%= render 'pages/listgroups', :section => section if section.listgroups.present? %>
+              <%= render 'pages/timelines', :section => section if section.timelines.present? %>
+              <%= render 'pages/videos', :section => section if section.videos.present? %>
+              <%= render 'pages/countdowns', :section => section if section.countdowns.present? %>
+              <%= render 'pages/horizontal_imageboxes', :section => section if section.horizontal_imageboxes.present? %>
+            </div>
+          </div>
+        </section>
+
+    <% end %>
+<% end %>

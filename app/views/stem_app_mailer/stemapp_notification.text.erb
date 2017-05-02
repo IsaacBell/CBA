@@ -1,0 +1,25 @@
+A <%= @stemapp.applicationtype.zero? ? 'STEM' : 'CREATE' %> application has been processed.
+-----------------------------------------------------
+
+Full name:  <%= "#{@stemapp.firstname} #{@stemapp.lastname}" %>
+
+Have you been admitted to the University of Alabama?
+  <%= @stemapp.admitted %>
+
+If so, what is your CWID?
+  <%= @stemapp.cwid %>
+
+What is/are your intended undergraduate majors?
+  <%= @stemapp.majors.html_safe %>
+
+What is your University of Alabama e-mail address?"
+  <%= @stemapp.uaemail %>
+
+Other e-mail addresses?
+  <%= @stemapp.otheremail.html_safe %>
+
+Please explain why you would like to be part of the <%= @stemapp.applicationtype.zero? ? 'STEM' : 'CREATE' %> Path to the MBA:
+  <%= @stemapp.essay.html_safe %>
+
+Thanks,
+The Culverhouse College of Commerce

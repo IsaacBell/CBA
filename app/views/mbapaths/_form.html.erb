@@ -1,0 +1,27 @@
+<%= simple_form_for @stemapp,:method => :post, :url => createstemapp_path, html: { class: 'form-horizontal' },
+                    wrapper: :horizontal_form,
+                    wrapper_mappings: {
+                        check_boxes: :horizontal_radio_and_checkboxes,
+                        radio_buttons: :horizontal_radio_and_checkboxes,
+                        file: :horizontal_file_input,
+                        boolean: :horizontal_boolean
+                    } do |f| %>
+    <p><%= f.input :applicationtype, :as => :hidden, :input_html => { :value => (@reference == 'STEM') ? 0 : 1 } %></p>
+    <p><%= f.input :firstname, :required => true, :label => "First Name:" %></p>
+    <p><%= f.input :middlename, :label => "Middle Name:" %> </p>
+    <p><%= f.input :lastname, :required => true, :label => "Last Name:" %> </p>
+    <p><%= f.input :admitted, :label => "Have you been admitted to the University of Alabama?", :wrapper => :inline_checkbox %></p>
+    <p><%= f.input :cwid, :required => true, :label => "If you have been admitted, what is your campus-wide ID? (CWID):" %></p>
+    <p><%= f.input :majors, :label => "What is/are your intended undergraduate majors?" %>
+    <p><%= f.input :uaemail, :label => "What is your University of Alabama e-mail address?", :placeholder => "username@crimson.ua.edu" %>
+    <p><%= f.input :otheremail, :label => "Other e-mail addresses?" %>
+
+    <p><%= f.input :essay, :label => "Please explain why you would like to be part of the #{@reference} Path to the MBA:" %>
+
+    <div>
+      </br>
+      <%= recaptcha_tags %>
+      </br>
+      <%= f.button :submit, 'Submit Application', :class=> "btn-crimson btn-md" %>
+    </div>
+<% end %>

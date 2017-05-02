@@ -1,0 +1,90 @@
+{:uriI"Œfile://app/assets/javascripts/codemirror/demo/widget.html?type=text/html&id=851f1e90f0815fb0076b008ed673e7bf9af601f07adc121a5921720b509db674:ET:load_pathI"app/assets/javascripts;T:filenameI"7app/assets/javascripts/codemirror/demo/widget.html;T:	nameI"codemirror/demo/widget;T:logical_pathI" codemirror/demo/widget.html;T:content_typeI"text/html;T:sourceI"i<!doctype html>
+
+<title>CodeMirror: Inline Widget Demo</title>
+<meta charset="utf-8"/>
+<link rel=stylesheet href="../doc/docs.css">
+
+<link rel="stylesheet" href="../lib/codemirror.css">
+<script src="../lib/codemirror.js"></script>
+<script src="../mode/javascript/javascript.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jshint/r07/jshint.js"></script>
+<style type="text/css">
+      .CodeMirror {border: 1px solid black;}
+      .lint-error {font-family: arial; font-size: 70%; background: #ffa; color: #a00; padding: 2px 5px 3px; }
+      .lint-error-icon {color: white; background-color: red; font-weight: bold; border-radius: 50%; padding: 0 3px; margin-right: 7px;}
+    </style>
+<div id=nav>
+  <a href="http://codemirror.net"><img id=logo src="../doc/logo.png"></a>
+
+  <ul>
+    <li><a href="../index.html">Home</a>
+    <li><a href="../doc/manual.html">Manual</a>
+    <li><a href="https://github.com/marijnh/codemirror">Code</a>
+  </ul>
+  <ul>
+    <li><a class=active href="#">Inline Widget</a>
+  </ul>
+</div>
+
+<article>
+<h2>Inline Widget Demo</h2>
+
+
+    <div id=code></div>
+    <script id="script">var widgets = []
+function updateHints() {
+  editor.operation(function(){
+    for (var i = 0; i < widgets.length; ++i)
+      editor.removeLineWidget(widgets[i]);
+    widgets.length = 0;
+
+    JSHINT(editor.getValue());
+    for (var i = 0; i < JSHINT.errors.length; ++i) {
+      var err = JSHINT.errors[i];
+      if (!err) continue;
+      var msg = document.createElement("div");
+      var icon = msg.appendChild(document.createElement("span"));
+      icon.innerHTML = "!!";
+      icon.className = "lint-error-icon";
+      msg.appendChild(document.createTextNode(err.reason));
+      msg.className = "lint-error";
+      widgets.push(editor.addLineWidget(err.line - 1, msg, {coverGutter: false, noHScroll: true}));
+    }
+  });
+  var info = editor.getScrollInfo();
+  var after = editor.charCoords({line: editor.getCursor().line + 1, ch: 0}, "local").top;
+  if (info.top + info.clientHeight < after)
+    editor.scrollTo(null, after - info.clientHeight + 3);
+}
+
+window.onload = function() {
+  var sc = document.getElementById("script");
+  var content = sc.textContent || sc.innerText || sc.innerHTML;
+
+  window.editor = CodeMirror(document.getElementById("code"), {
+    lineNumbers: true,
+    mode: "javascript",
+    value: content
+  });
+
+  var waiting;
+  editor.on("change", function() {
+    clearTimeout(waiting);
+    waiting = setTimeout(updateHints, 500);
+  });
+
+  setTimeout(updateHints, 100);
+};
+
+"long line to create a horizontal scrollbar, in order to test whether the (non-inline) widgets stay in place when scrolling to the right";
+</script>
+<p>This demo runs <a href="http://jshint.com">JSHint</a> over the code
+in the editor (which is the script used on this page), and
+inserts <a href="../doc/manual.html#addLineWidget">line widgets</a> to
+display the warnings that JSHint comes up with.</p>
+  </article>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Efile-digest://app/assets/javascripts/codemirror/demo/widget.html;TTF:charsetI"
+utf-8;F:digest"%…Î/§¢2×ÚZ”šç¨óN|t‚Oz^A{:b‘ì’U:lengthii:dependencies_digest"%»·ĞĞ¨^ÖÂãoæ	ÚAjìùxÂ1Œ#ÑØ1Ş¡s#:idI"E851f1e90f0815fb0076b008ed673e7bf9af601f07adc121a5921720b509db674;F:
+mtimel+ÿ_iX

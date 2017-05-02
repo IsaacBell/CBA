@@ -1,0 +1,54 @@
+{:uriI"ìfile://app/assets/javascripts/codemirror/mode/gherkin/index.html?type=text/html&id=d8a0d5c4be95881f4df651fdfcc7830a289e7def92c515be38b889bd547d88fb:ET:load_pathI"app/assets/javascripts;T:filenameI">app/assets/javascripts/codemirror/mode/gherkin/index.html;T:	nameI""codemirror/mode/gherkin/index;T:logical_pathI"'codemirror/mode/gherkin/index.html;T:content_typeI"text/html;T:sourceI"<!doctype html>
+
+<title>CodeMirror: Gherkin mode</title>
+<meta charset="utf-8"/>
+<link rel=stylesheet href="../../doc/docs.css">
+
+<link rel="stylesheet" href="../../lib/codemirror.css">
+<script src="../../lib/codemirror.js"></script>
+<script src="gherkin.js"></script>
+<style>.CodeMirror { border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }</style>
+<div id=nav>
+  <a href="http://codemirror.net"><img id=logo src="../../doc/logo.png"></a>
+
+  <ul>
+    <li><a href="../../index.html">Home</a>
+    <li><a href="../../doc/manual.html">Manual</a>
+    <li><a href="https://github.com/marijnh/codemirror">Code</a>
+  </ul>
+  <ul>
+    <li><a href="../index.html">Language modes</a>
+    <li><a class=active href="#">Gherkin</a>
+  </ul>
+</div>
+
+<article>
+<h2>Gherkin mode</h2>
+<form><textarea id="code" name="code">
+Feature: Using Google
+  Background: 
+    Something something
+    Something else
+  Scenario: Has a homepage
+    When I navigate to the google home page
+    Then the home page should contain the menu and the search form
+  Scenario: Searching for a term 
+    When I navigate to the google home page
+    When I search for Tofu
+    Then the search results page is displayed
+    Then the search results page contains 10 individual search results
+    Then the search results contain a link to the wikipedia tofu page
+</textarea></form>
+    <script>
+      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {});
+    </script>
+
+    <p><strong>MIME types defined:</strong> <code>text/x-feature</code>.</p>
+
+  </article>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Lfile-digest://app/assets/javascripts/codemirror/mode/gherkin/index.html;TTF:charsetI"
+utf-8;F:digest"%ò`"%1¿√UE¸Å¸˛á¬»∫WGã7Uœë$©ﬁ
+:lengthi:dependencies_digest"%ìW‰\æ?~ÚJ∫ò6Fßâq nüe›v“//©Ü:idI"Ed8a0d5c4be95881f4df651fdfcc7830a289e7def92c515be38b889bd547d88fb;F:
+mtimel+ˆ_iX

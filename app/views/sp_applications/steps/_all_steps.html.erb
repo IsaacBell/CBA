@@ -1,0 +1,5 @@
+<%= hidden_field_tag :all, 1 %>
+<% SpApplication.total_steps.times do |step| %>
+  <%= render "sp_applications/steps/page#{step + 1}", f: f %>
+<% end %>
+

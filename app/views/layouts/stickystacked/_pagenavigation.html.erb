@@ -1,0 +1,76 @@
+<section class="site-section-top">
+  <div class="bg-img" style="background-image: url('<%= @page.header_image.present? ? @page.header_image.fullsize.url : random_background_photo %>');background-position: 0px 0px;">
+    <div class="container site-content">
+      <div class="site-heading-bg-light">
+        <h1 class="site-heading-small"> <%= @page.title %>  </h1>
+      </div> <!-- .site-heading-bg -->
+    </div> <!-- .container -->
+  </div> <!-- .site-section-bg -->
+</section>
+
+<div class="sticky-menu-secondary-container hidden-xs hidden-sm">
+  <div class="menu-secondary menu-light menu-secondary-sticky scroll-to">
+    <div class="container">
+      <nav id="menu-secondary-sticky">
+        <ul class="nav nav-justified">
+
+          <!-- If there is a parent to the page, link to the parent page.  If not, don't display it. -->
+          <% if @page.parent.present? %>
+              <li> <%= link_to @page.parent.title, "#{request.base_url}/#{@page.parent.slug}" %></li>
+
+              <!--  Link to any subpages assigned to this page. -->
+              <% @page.parent.subpages.published.sorted.each do |s| %>
+                  <% if s.external_url.present? %>
+                      <%= link_to_in_li "#{s.title}", "#{s.external_url}", target: "_blank" %>
+                  <% elsif s.id == @page.id %>
+                      <%= link_to_in_li "#{s.title}", { :controller => :pages, :action => :show2, :parent_id => s.parent.slug, :id => s.slug } %>
+                      <% s.sections.sorted.where.not(title: '').order('position ASC').each_with_index do |section, index| %>
+                          <% indexplusone = index + 1 %>
+                          <% if index == 0 %>
+                              <%= link_to_in_li "#{section.title}", { :controller => :pages, :action => :show2, :id => s.slug, :anchor => "item-#{indexplusone}" } %>
+                          <% else %>
+                              <%= link_to_in_li "#{section.title}", { :controller => :pages, :action => :show2, :id => s.slug, :anchor => "item-#{indexplusone}" } %>
+                          <% end %>
+                      <% end %>
+                  <% else %>
+                      <%= link_to_in_li "#{s.title}", { :controller => :pages, :action => :show2, :parent_id => s.parent.slug, :id => s.slug } %>
+                  <% end %>
+              <% end %>
+
+          <% else %>
+              <li> <%# link_to @page.title, {:controller => "pages", :action => "show2", :id => @page.slug } %></li>
+
+              <!-- Links to the sections of the current page. -->
+              <% @page.sections.published.sorted.where.not(title: '').order('position ASC').each_with_index do |section, index| %>
+                  <% indexplusone = index + 1 %>
+                  <% if index == 0 %>
+                      <% if section.external_url.present? %>
+                          <%= link_to_in_li "#{section.title}", section.external_url %>
+                      <% else %>
+                          <%= link_to_in_li "#{section.title}", { :controller => :pages, :action => :show2, :id => @page.slug, :anchor => "item-#{indexplusone}" } %>
+                      <% end %>
+                  <% else %>
+                      <% if section.external_url.present? %>
+                          <%= link_to_in_li "#{section.title}", section.external_url %>
+                      <% else %>
+                          <%= link_to_in_li "#{section.title}", { :controller => :pages, :action => :show2, :id => @page.slug, :anchor => "item-#{indexplusone}" } %>
+                      <% end %>
+                  <% end %>
+              <% end %>
+
+              <!--  Link to any subpages assigned to this page. -->
+              <% @page.subpages.published.sorted.each do |s| %>
+                  <% if s.external_url.present? %>
+                      <%= link_to_in_li "#{s.title}", "#{s.external_url}", target: "_blank" %>
+                  <% else %>
+                      <%= link_to_in_li "#{s.title}", { :controller => :pages, :action => :show2, :parent_id => s.parent.slug, :id => s.slug } %>
+                  <% end %>
+              <% end %>
+
+          <% end %>
+
+        </ul>
+      </nav>
+    </div> <!-- .container -->
+  </div> <!-- .menu-secondary -->
+</div> <!-- .sticky-menu-secondary-container -->

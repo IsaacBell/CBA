@@ -1,0 +1,14 @@
+{:uriI"³file://app/assets/less/javascripts/ckeditor/plugins/slideshow_1.18/lang/Serbian_translation.txt?type=text/plain&id=320f1815b4988e3c325767aab090eaae7ae54c8f20690c8d558b7f617b91da30:ET:load_pathI"app/assets/less;T:filenameI"]app/assets/less/javascripts/ckeditor/plugins/slideshow_1.18/lang/Serbian_translation.txt;T:	nameI"Ijavascripts/ckeditor/plugins/slideshow_1.18/lang/Serbian_translation;T:logical_pathI"Mjavascripts/ckeditor/plugins/slideshow_1.18/lang/Serbian_translation.txt;T:content_typeI"text/plain;T:sourceI"C
+Serbian translation...
+Notice..
+montenegrian, and Bosnian and Croatian are a Same...
+but here we have TWO ways... latin and Cirilic...
+In CKEditor that latin have index 'sr-latn' and cyrilic is index only 'sr '
+
+Montenegrian and bosnian and croatian knows too cyrilic but they won't put them on the internet :)
+however...
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"4processors:type=text/plain&file_type=text/plain;TTI"kfile-digest://app/assets/less/javascripts/ckeditor/plugins/slideshow_1.18/lang/Serbian_translation.txt;TTF:charsetI"
+utf-8;F:digest"%­Hú¤o+„µÅº­'¿Äi²M&[­SÌr=×D:lengthiC:dependencies_digest"%•’^í‘+Ø}[¡Á$¦©®§¾¾ˆ9Çi¼2FGu:idI"E320f1815b4988e3c325767aab090eaae7ae54c8f20690c8d558b7f617b91da30;F:
+mtimel+»X

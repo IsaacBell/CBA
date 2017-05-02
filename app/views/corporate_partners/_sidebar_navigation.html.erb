@@ -1,0 +1,24 @@
+<div class="sidebar sidebar-sticky affix-top scroll-to hidden-xs hidden-sm">
+  <% if current_corporate_partner %>
+      <div style="text-align:center;">Signed in as <%= current_corporate_partner.fullname %></div>
+      <a href="/corporate-partners/logout" class="btn btn-crimson btn-featured-left btn-block font-weight-600 uppercase margin-top-30">Logout<i class="fa fa-cog"></i></a></br>
+
+      <ul class="nav nav-pills nav-stacked">
+        <%= nav_link 'Corporate Partner Portal', '/corporate-partners/portal' %>
+        <%= nav_link 'Corporate Concierge', '/concierge' %>
+        <%= nav_link 'Student Directory', '/manderson-profiles' %>
+        <%= nav_link 'Contacts', '/corporate-partners/contacts' %>
+        <%= nav_link 'Events', '/corporate-partners/events' %>
+      </ul>
+
+  <% else %>
+      <a href="/corporate-partners/login" class="btn btn-light btn-featured-left btn-block font-weight-600 uppercase margin-top-10">Login<i class="fa fa-cog"></i></a><br>
+
+      <ul class="nav nav-pills nav-stacked">
+        <%= nav_link 'Corporate Partners', '/corporate-partners' %>
+        <%= nav_link 'Corporate Concierge', '/concierge' %>
+        <%= nav_link 'Contacts', '/corporate-partners/contacts' %>
+      </ul>
+  <% end %>
+
+</div> <!-- .sidebar -->

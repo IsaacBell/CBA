@@ -1,0 +1,185 @@
+// Place all the styles related to the ElevatorDirectory controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #990000;
+  color: #fff;
+  font-family: Verdana;
+  font-size: 62.5%;
+}
+
+#container {
+  width: 1080px;
+  height: 1920px;
+  /*border: #000 1px solid;*/
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+#map_container {
+  width: 1080px;
+  height: 1920px;
+  background: url(http://cba.ua.edu/themes/cba2/images/signage/campus_map.png) top left no-repeat;
+  margin: 0 auto;
+}
+
+#welcome_container {
+  width: 1080px;
+  height: 1920px;
+  background: url(http://cba.ua.edu/themes/cba2/images/signage/alston.png) top left no-repeat;
+  margin: 0 auto;
+}
+
+#time {
+  position: absolute;
+  top: 0;
+  padding: 20px;
+  font-size: 3.6em;
+  text-align: center;
+  width: 100%;
+  background: #990000;
+  color: #fff;
+}
+
+
+div.department_container {
+  /* position: absolute; */
+  top: 0;
+  left: 4px;
+  width: 1072px;
+}
+
+div.department {
+  position: relative;
+}
+
+h2 {
+  margin: 3px 0 3px 0;
+  padding: 0 0 0 0;
+  font-weight: normal;
+  font-size: 1em;
+  position: relative;
+  background: #440000;
+  height: 40px;
+}
+
+h2 .dept_name {
+  position: absolute;
+  left: 8px;
+  bottom: 2px;
+  font-size: 3em;
+}
+
+h2 .dept_office {
+  position: absolute;
+  right: 8px;
+  bottom: 2px;
+  font-size: 1.6em;
+}
+
+div.col0 {
+  width: 265px;
+  float: left;
+  margin-right: 4px;
+}
+
+div.col1 {
+  width: 265px;
+  float: left;
+  margin-right: 4px;
+}
+
+div.col2 {
+  width: 265px;
+  float: left;
+  margin-right: 4px;
+}
+
+div.col3 {
+  width: 265px;
+  float: left;
+}
+
+div.person {
+  margin: 0 0 4px 0;
+  /* padding: 4px 4px 4px 0; */
+  padding: 2px 2px 2px 0;
+}
+
+div.bidgood 		    { background: #333;		border: #111 1px solid;		}
+div.bevill		    { background: #000000;	border: #111 1px solid;		} /* FS */
+div.aime		    { background: #006600;	border: #111 1px solid;		} /* FS */
+div.faculty		    { background: #660000;	border: #440000 1px solid;	}
+div.associate_professor     { background: #660000;	border: #440000 1px solid;	}
+div.assistant_professor     { background: #660000;	border: #440000 1px solid;	}
+div.professor               { background: #660000;	border: #440000 1px solid;	}
+div.instructor              { background: #660000;	border: #440000 1px solid;	}
+div.professional_staff      { background: #660000;	border: #440000 1px solid;	}
+div.staff                   { background: #660000;	border: #440000 1px solid;	}
+div.non-college_personnel   { background: #660000;	border: #440000 1px solid;	}
+div.student_employee        { background: #660000;	border: #440000 1px solid;	}
+div.graduate_student        { background: #660000;	border: #440000 1px solid;	}
+div.visiting_scholar        { background: #660000;	border: #440000 1px solid;	}
+
+div.person span.office {
+  float: left;
+  display: block;
+  margin: -3px 2px 0 0;
+  padding: 2px 3px 4px 1px;
+  font-size: 1.6em;
+}
+
+div.bidgood 		    span.office { background: #222; }
+div.bevill		    span.office { background: #410000; } /* FS */
+div.aime		    span.office { background: #000000; } /* FS */
+div.faculty		    span.office { background: #440000; }
+div.associate_professor     span.office { background: #440000; }
+div.assistant_professor     span.office { background: #440000; }
+div.professor               span.office { background: #440000; }
+div.instructor              span.office { background: #440000; }
+div.professional_staff      span.office { background: #440000; }
+div.staff                   span.office { background: #440000; }
+div.non-college_personnel   span.office { background: #440000; }
+div.student_employee        span.office { background: #440000; }
+div.graduate_student        span.office { background: #440000; }
+div.visiting_scholar        span.office { background: #440000; }
+
+div.person span.name {
+  display: block;
+  margin: 0 0 0 35px;
+  font-size: 1.6em;
+}
+
+div.person span.title {
+  display: block;
+  margin: 0 0 0 35px;
+  color: #ccc;
+  font-size: 0.8em;
+}
+
+#color_legend {
+  background: #ffffff;
+  position: absolute;
+  top: 1880px;
+  left: 0;
+}
+
+#color_legend div {
+  float: left;
+  width: 268px;
+  height: 40px;
+  padding-top: 8px;
+  text-align: center;
+  font-size: 2.2em;
+}
+
+#color_legend .faculty 	{ background: #660000; 	border: 0;	}
+#color_legend .staff 	{ display: none; }
+/*#color_legend .staff 	{ background: #666; 	border: 0;	}*/
+#color_legend .bidgood 	{ background: #333; 	border: 0;  }
+#color_legend .aime	{ background: #006600;	border: 0;  } /* FS */
+#color_legend .bevill   { background: #000000;  border: 0;  } /* FS */

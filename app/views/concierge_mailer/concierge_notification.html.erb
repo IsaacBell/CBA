@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<h2>A Culverhouse Concierge request has been processed. </h2>
+<p></p>
+
+<p><b>Contact:</b>  <%= "#{@corporate_contact.firstname} #{@corporate_contact.lastname}" %></p>
+<p><b>Phone:</b> <%= @corporate_contact.phone %></p>
+<p><b>Email:</b> <%= @corporate_contact.email %></p>
+<p><b>Company:</b> <%= @corporate_contact.company %></p>
+<p><b>Position:</b> <%= @corporate_contact.position %></p>
+<p><b>Date of Fill Position:</b> <%= @corporate_contact.date_of_fill_position %></p>
+<p><b>Requirements:</b> <%= @corporate_contact.degrees %></p>
+
+<p></p>
+<p>Thanks,</p>
+<p>The Culverhouse College of Commerce</p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<style>
+  .ctr {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+
+<div class="row">
+  <div class="col-md-12">
+
+    <% section.horizontal_imageboxes.each do |i| %>
+      <div class="col-md-6 col-sm-6 col-xs-6">
+      <div class="content-box box-img bg-light">
+        <div class="row no-gutter">
+          <div class="col-lg-6 col-md-12">
+            <%= i.image.present? ? image_tag("#{i.image.url}", class: "img-responsive") : image_tag("https://www.ua.edu/img/woodshall01_400.jpg", class: "img-responsive", alt: "woods hall") %>
+          </div> <!-- .col-lg-6 col-md-12 -->
+          <div class="col-lg-6 col-md-12">
+            <div class="box-body">
+              <% if i.url.present? %>
+                  <%= link_to i.url, :target => i.target  do %>
+                      <%= raw(i.desc) %>
+                  <% end %>
+              <% else %>
+                  <%= raw(i.desc) %>
+              <% end %>
+              <br><br>
+            </div> <!-- .box-body -->
+          </div> <!-- .col-lg-6 col-md-12 -->
+        </div> <!-- .row -->
+      </div> <!-- .box-img -->
+        </div>
+    <% end %>
+  </div>
+</div>

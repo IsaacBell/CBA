@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<h2>A <%= @stemapp.applicationtype.zero? ? 'STEM' : 'CREATE' %> Path to the MBA application has been processed. </h2>
+<p></p>
+
+<p>Full name:  <%= "#{@stemapp.firstname} #{@stemapp.lastname}" %></p>
+<p>Have you been admitted to the University of Alabama?<br>
+  <%= @stemapp.admitted %></p>
+
+<p>If so, what is your CWID?<br>
+  <%= @stemapp.cwid %></p>
+
+<p>What is/are your intended undergraduate majors?<br>
+  <%= @stemapp.majors.html_safe %></p>
+
+<p>What is your University of Alabama e-mail address?"<br>
+  <%= @stemapp.uaemail %></p>
+
+<p>Other e-mail addresses?<br>
+  <%= @stemapp.otheremail.html_safe %></p>
+
+<p>Please explain why you would like to be part of the <%= @stemapp.applicationtype.zero? ? 'STEM' : 'CREATE' %> Path to the MBA:<br>
+  <%= @stemapp.essay.html_safe %></p>
+
+<p>Thanks,</p>
+<p>The Culverhouse College of Commerce</p>
+</body>
+</html>

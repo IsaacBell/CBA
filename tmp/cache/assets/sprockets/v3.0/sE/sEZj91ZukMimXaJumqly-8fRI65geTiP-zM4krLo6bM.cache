@@ -1,0 +1,36 @@
+{:uriI"»file://app/assets/less/javascripts/ckeditor/plugins/jsplus_bootstrap_editor/lib/plugins/alphamanager/conf.json?type=application/json&id=916a4424219ac3ddcaba045e6e83723c7b441e1cb1309dc693c31ab0791e7324:ET:load_pathI"app/assets/less;T:filenameI"lapp/assets/less/javascripts/ckeditor/plugins/jsplus_bootstrap_editor/lib/plugins/alphamanager/conf.json;T:	nameI"Wjavascripts/ckeditor/plugins/jsplus_bootstrap_editor/lib/plugins/alphamanager/conf;T:logical_pathI"\javascripts/ckeditor/plugins/jsplus_bootstrap_editor/lib/plugins/alphamanager/conf.json;T:content_typeI"application/json;T:sourceI""{
+"FILES_ROOT":          "../uploads",
+"SESSION_PATH_KEY":    "",
+"RESIZE_IMAGE_WIDTH":  "0",
+"RESIZE_IMAGE_HEIGHT": "0",
+"MAX_IMAGE_WIDTH":     "1280",
+"MAX_IMAGE_HEIGHT":    "0",
+"MAX_IMAGE_SIZE":      "10000000",
+"FORBIDDEN_UPLOADS":   "zip js jsp jsb mhtml mht xhtml xht php phtml php3 php4 php5 phps shtml jhtml pl sh py cgi exe application gadget hta cpl msc jar vb jse ws wsf wsc wsh ps1 ps2 psc1 psc2 msh msh1 msh2 inf reg scf msp scr dll msi vbs bat com pif cmd vxd cpl htpasswd htaccess",
+"ALLOWED_UPLOADS":     "",
+"FILEPERMISSIONS":     "0644",
+"DIRPERMISSIONS":      "0755",
+"STORE_PREVIEWS_DIR":  "cache",
+
+"DIRLIST":             "php/dirtree.php",
+"CREATEDIR":           "php/createdir.php",
+"DELETEDIR":           "php/deletedir.php",
+"MOVEDIR":             "php/movedir.php",
+"COPYDIR":             "php/copydir.php",
+"RENAMEDIR":           "php/renamedir.php",
+"FILESLIST":           "php/fileslist.php",
+"UPLOAD":              "php/upload.php",
+"UPLOADURL":           "php/uploadurl.php",
+"DOWNLOAD":            "php/download.php",
+"DOWNLOADDIR":         "php/downloaddir.php",
+"DELETEFILE":          "php/deletefile.php",
+"MOVEFILE":            "php/movefile.php",
+"COPYFILE":            "php/copyfile.php",
+"RENAMEFILE":          "php/renamefile.php",
+"GENERATETHUMB":       "php/thumb.php"
+
+};T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"zfile-digest://app/assets/less/javascripts/ckeditor/plugins/jsplus_bootstrap_editor/lib/plugins/alphamanager/conf.json;TTF:charsetI"
+utf-8;F:digest"%%çf‹¡{K≤ópB´¨`˜u*O¢åuÿéÕÊﬂÉ`:lengthi":dependencies_digest"%Q!»\"á6ËsΩEæPñíÇñ–ßÊ £æh¬$∑;:idI"E916a4424219ac3ddcaba045e6e83723c7b441e1cb1309dc693c31ab0791e7324;F:
+mtimel+ªX

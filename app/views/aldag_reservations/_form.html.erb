@@ -1,0 +1,21 @@
+<%= simple_form_for @aldag_reservation,:method => :post, :url => attendee_registration_path, html: { class: 'form-horizontal' },
+                    wrapper: :horizontal_form,
+                    wrapper_mappings: {
+                        check_boxes: :horizontal_radio_and_checkboxes,
+                        radio_buttons: :horizontal_radio_and_checkboxes,
+                        file: :horizontal_file_input,
+                        boolean: :horizontal_boolean
+                    } do |f| %>
+    <p><%= f.input :firstname, :required => true, :label => "First Name" %></p>
+    <p><%= f.input :lastname, :required => true, :label => "Last Name" %> </p>
+    <p><%= f.input :email, :required => true, :label => "Email Address" %></p>
+    <p><%= f.input :phone, :label => "Phone" %></p>
+    <p><%= f.input :advisor, :label => "Share the Name of Your Faculty Advisor.", placeholder: 'Leave blank if you do not have a Faculty Advisor.' %> </p>
+    <p><%= f.input :idea, :label => "Briefly Describe Your Idea." %> </p>
+    <div>
+      </br>
+      <%= recaptcha_tags %>
+      </br>
+      <%= f.button :submit, 'Submit Application', :class=> "btn-crimson btn-md" %>
+    </div>
+<% end %>

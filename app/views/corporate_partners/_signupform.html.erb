@@ -1,0 +1,23 @@
+<%= simple_form_for @corporate_partner, :method => :post, :url => register_corporate_partner_path, html: { class: 'form-horizontal' },
+                    wrapper: :horizontal_form do |f| %>
+
+    <div class="form-inputs">
+      <p><%= f.input :firstname, :placeholder => "First Name" %></p>
+      <p><%= f.input :lastname, :placeholder => "Last Name" %></p>
+      <p><%= f.input :phone, :label => "Phone Number", :placeholder => "###-###-###" %></p>
+      <p><%= f.input :email, :label => "Email", :placeholder => "corporate@company.com"  %></p>
+      <p><%= f.input :company, :label => "Company Name" %></p>
+      <p><%= f.input :position, :label => "Position" %></p>
+      <p><%= f.hidden_field :password, value: "success2017" %></p>
+      <p><%= f.hidden_field :password_confirmation, value: "success2017" %></p>
+      <p><%= f.hidden_field :status, value: "0" %></p>
+    </div>
+
+    <div>
+
+    </br>
+    <%= recaptcha_tags %>
+    </br>
+    <%= f.button :submit, 'Complete Registration' %>
+    </div>
+<% end %>

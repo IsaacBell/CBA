@@ -1,0 +1,80 @@
+{:uriI"êfile://app/assets/less/javascripts/codemirror/demo/emacs.html?type=text/html&id=b1c0713420ef9244ef805c0da92bedece56fffb12b3c1f716bef0396b1f2fb4e:ET:load_pathI"app/assets/less;T:filenameI";app/assets/less/javascripts/codemirror/demo/emacs.html;T:	nameI"&javascripts/codemirror/demo/emacs;T:logical_pathI"+javascripts/codemirror/demo/emacs.html;T:content_typeI"text/html;T:sourceI"ñ	<!doctype html>
+
+<title>CodeMirror: Emacs bindings demo</title>
+<meta charset="utf-8"/>
+<link rel=stylesheet href="../doc/docs.css">
+
+<link rel="stylesheet" href="../lib/codemirror.css">
+<link rel="stylesheet" href="../addon/dialog/dialog.css">
+<script src="../lib/codemirror.js"></script>
+<script src="../mode/clike/clike.js"></script>
+<script src="../keymap/emacs.js"></script>
+<script src="../addon/edit/matchbrackets.js"></script>
+<script src="../addon/comment/comment.js"></script>
+<script src="../addon/dialog/dialog.js"></script>
+<script src="../addon/search/searchcursor.js"></script>
+<script src="../addon/search/search.js"></script>
+<style type="text/css">
+      .CodeMirror {border-top: 1px solid #eee; border-bottom: 1px solid #eee;}
+    </style>
+<div id=nav>
+  <a href="http://codemirror.net"><img id=logo src="../doc/logo.png"></a>
+
+  <ul>
+    <li><a href="../index.html">Home</a>
+    <li><a href="../doc/manual.html">Manual</a>
+    <li><a href="https://github.com/marijnh/codemirror">Code</a>
+  </ul>
+  <ul>
+    <li><a class=active href="#">Emacs bindings</a>
+  </ul>
+</div>
+
+<article>
+<h2>Emacs bindings demo</h2>
+<form><textarea id="code" name="code">
+#include "syscalls.h"
+/* getchar:  simple buffered version */
+int getchar(void)
+{
+  static char buf[BUFSIZ];
+  static char *bufp = buf;
+  static int n = 0;
+  if (n == 0) {  /* buffer is empty */
+    n = read(0, buf, sizeof buf);
+    bufp = buf;
+  }
+  return (--n >= 0) ? (unsigned char) *bufp++ : EOF;
+}
+</textarea></form>
+
+<p>The emacs keybindings are enabled by
+including <a href="../keymap/emacs.js">keymap/emacs.js</a> and setting
+the <code>keyMap</code> option to <code>"emacs"</code>. Because
+CodeMirror's internal API is quite different from Emacs, they are only
+a loose approximation of actual emacs bindings, though.</p>
+
+<p>Also note that a lot of browsers disallow certain keys from being
+captured. For example, Chrome blocks both Ctrl-W and Ctrl-N, with the
+result that idiomatic use of Emacs keys will constantly close your tab
+or open a new window.</p>
+
+    <script>
+      CodeMirror.commands.save = function() {
+        var elt = editor.getWrapperElement();
+        elt.style.background = "#def";
+        setTimeout(function() { elt.style.background = ""; }, 300);
+      };
+      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        lineNumbers: true,
+        mode: "text/x-csrc",
+        keyMap: "emacs"
+      });
+    </script>
+
+  </article>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Ifile-digest://app/assets/less/javascripts/codemirror/demo/emacs.html;TTF:charsetI"
+utf-8;F:digest"%$ˆÑwÏ—RY∂|ˆ¢âòÜB!®∫ç~“õ†ãm©z:lengthiñ	:dependencies_digest"%ç/ÛrÑ†nu/óYñDI∞©ˇX‡∫,s>∏&F:idI"Eb1c0713420ef9244ef805c0da92bedece56fffb12b3c1f716bef0396b1f2fb4e;F:
+mtimel+ªX

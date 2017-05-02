@@ -1,0 +1,12 @@
+#ie-warning {
+	display: block;
+}
+.indicator {
+	display: none;
+}
+.flex-direction-nav a {
+	display: none;
+}
+.expander {
+	margin: 0 -20px 0 0;
+}

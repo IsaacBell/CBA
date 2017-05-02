@@ -1,0 +1,32 @@
+<%= simple_form_for @corporate_contact,:method => :post, :url => concierge_path, html: { class: 'form-horizontal' },
+                    wrapper: :horizontal_form,
+                    wrapper_mappings: {
+                        check_boxes: :horizontal_radio_and_checkboxes,
+                        radio_buttons: :horizontal_radio_and_checkboxes,
+                        file: :horizontal_file_input,
+                        boolean: :horizontal_boolean
+                    } do |f| %>
+    <%= f.error_notification %>
+
+    <div class="form-inputs">
+      <%= f.input :firstname,  :placeholder => "First Name" %>
+      <%= f.input :lastname,:label => "Last Name", :placeholder => "Last Name" %>
+      <%= f.input :email, :label => "Email", :placeholder => "corporate@company.com"  %>
+      <%= f.input :phone, :label => "Phone Number", :placeholder => "###-###-###" %>
+      <%= f.input :company, :label => "Company Name" %>
+      <%= f.input :position, :label => "Position" %>
+      <%= f.input :type, :label => "Type", :collection => ['Full-Time', 'Internship', 'Both'], :include_blank => false, :input_html => {:style => 'width: 360px'}   %>
+      <%= f.input :educational_details, :label => "Educational Detail", :collection => ['Master of Arts in Economics', 'Master of Accountancy', 'Master of Tax Accounting', 'MBA', 'EMBA', 'Master of Science in Applied Statistics', 'Master of Science in Finance', 'Master of Science in Marketing', 'Master of Science in Operations Management'], :include_blank => false, :input_html => {:style => 'width: 360px'} %>
+      <%= f.input :date_of_fill_position, :label => "Date of Fill Position", as: :date_picker, required: false,
+                  :placeholder => 'Select date', input_html: {class: "form-control"} %>
+      <%= f.input :degrees, :label => "Requirements" %>
+    </div>
+
+    </br>
+    <%= recaptcha_tags %>
+    </br>
+
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+<% end %>

@@ -1,0 +1,27 @@
+<%= simple_form_for @aldag_judge,:method => :post, :url => register_aldag_judge_path, html: { class: 'form-horizontal' },
+                    wrapper: :horizontal_form,
+                    wrapper_mappings: {
+                        check_boxes: :horizontal_radio_and_checkboxes,
+                        radio_buttons: :horizontal_radio_and_checkboxes,
+                        file: :horizontal_file_input,
+                    } do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :firstname, :required => true, :label => "First Name" %>
+    <%= f.input :lastname, :required => true, :label => "Last Name" %>
+    <%= f.input :title, :required => true, :label => "Title" %>
+    <%= f.input :company, :required => true, :label => "Company" %>
+    <%= f.input :email, :required => true, :label => "Email Address" %>
+    <%= f.input :phone, :label => "Phone" %>
+    <p><strong>Preferences:</strong></p>
+    <%= f.input :am, :label => "I Plan To Attend AM Sessions" %>
+    <%= f.input :pm, :label => "I Plan To Attend PM Sessions" %>
+    <%= f.input :attending_lunch, :label => "I Plan To Attend Lunch" %>
+    <%= f.input :attending_reception_and_awards, :label => "I Plan To Attend the Reception and Awards Ceremony" %>
+
+    <div>
+      </br>
+      <%= recaptcha_tags %>
+      </br>
+      <%= f.button :submit, 'Submit Application', :class=> "btn-crimson btn-md" %>
+    </div>
+<% end %>

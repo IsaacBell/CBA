@@ -1,0 +1,18 @@
+<% if @spapp.errors.any? %>
+  <div id="errors">
+    <ul>
+    <% @spapp.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= simple_form_for(@spapp,:method => :post, :url => sp_app_submit_path, html: {class: 'form-horizontal'}, wrapper: :horizontal_form) do |f| %>
+        <%= f.error_notification %>
+  <% if params[:all].nil? %>
+    <%= render 'sp_applications/steps/current_step', f: f %>
+  <% else %>
+    <%= render 'sp_applications/steps/all_steps', f: f %>
+  <% end %>
+<% end %>

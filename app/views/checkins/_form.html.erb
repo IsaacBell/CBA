@@ -1,0 +1,17 @@
+<% if @visitor.errors.any? %>
+    <div id="errors">
+      <ul>
+        <% @visitor.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+
+<%= form_for build_visitor(@visitor) do |f| %>
+    <% if params[:all].nil? %>
+        <%= render 'checkins/steps/current_step', f: f %>
+    <% else %>
+        <%= render 'checkins/steps/all_steps', f: f %>
+    <% end %>
+<% end %>

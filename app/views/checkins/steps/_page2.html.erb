@@ -1,0 +1,11 @@
+
+<div class="field">
+  #Whom are you visiting
+</div>
+
+<%= f.fields_for :visitor_reasons do |cf| %>
+    <div class="field">
+      <%= cf.label :title, "Reason:" %><br />
+      <%= cf.text_field :title %>
+    </div>
+<% end %>

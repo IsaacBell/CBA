@@ -1,0 +1,17 @@
+{:uriI"Øfile://app/assets/less/javascripts/ckeditor/plugins/jsplus_bootstrap_icons/jscolor/demo.html?type=text/html&id=da75d859b1a2984a63a8857b1343778dfb38392a2d5792a1c712077936cd33f2:ET:load_pathI"app/assets/less;T:filenameI"Zapp/assets/less/javascripts/ckeditor/plugins/jsplus_bootstrap_icons/jscolor/demo.html;T:	nameI"Ejavascripts/ckeditor/plugins/jsplus_bootstrap_icons/jscolor/demo;T:logical_pathI"Jjavascripts/ckeditor/plugins/jsplus_bootstrap_icons/jscolor/demo.html;T:content_typeI"text/html;T:sourceI"∫<html>
+<head>
+	<title>jscolor demo</title>
+</head>
+<body>
+
+	<script type="text/javascript" src="jscolor.js"></script>
+
+	Click here: <input class="color" value="66ff00">
+
+</body>
+</html>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"hfile-digest://app/assets/less/javascripts/ckeditor/plugins/jsplus_bootstrap_icons/jscolor/demo.html;TTF:charsetI"
+utf-8;F:digest"%˝35vEtHR1)Fw¬ƒèß)üΩûñ1ôIkP˙÷≠:lengthi∫:dependencies_digest"%Ä∫¡{7Lßø;¢«ûvö∂óP )=÷aq/9¨3j?§:idI"Eda75d859b1a2984a63a8857b1343778dfb38392a2d5792a1c712077936cd33f2;F:
+mtimel+ªX

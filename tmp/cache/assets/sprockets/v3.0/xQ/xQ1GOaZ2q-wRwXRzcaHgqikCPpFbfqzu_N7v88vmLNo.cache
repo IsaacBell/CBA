@@ -1,0 +1,17 @@
+{:uriI"ªfile://app/assets/javascripts/ckeditor/plugins/jsplus_special_symbols/jscolor/demo.html?type=text/html&id=9f40af813bc551e2f2df26fe1e5a6284d71149196f3b6e2df2d363ab60379ad3:ET:load_pathI"app/assets/javascripts;T:filenameI"Uapp/assets/javascripts/ckeditor/plugins/jsplus_special_symbols/jscolor/demo.html;T:	nameI"9ckeditor/plugins/jsplus_special_symbols/jscolor/demo;T:logical_pathI">ckeditor/plugins/jsplus_special_symbols/jscolor/demo.html;T:content_typeI"text/html;T:sourceI"º<html>
+<head>
+	<title>jscolor demo</title>
+</head>
+<body>
+
+	<script type="text/javascript" src="jscolor.js"></script>
+
+	Click here: <input class="color" value="66ff00">
+
+</body>
+</html>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"cfile-digest://app/assets/javascripts/ckeditor/plugins/jsplus_special_symbols/jscolor/demo.html;TTF:charsetI"
+utf-8;F:digest"%ı35vEtHR1)FwÂÄ§)Ÿ½–1™IkPúÖ­:lengthiº:dependencies_digest"%€ºÁ{7L§¿;¢Çvš¶—PÊ)=Öaq/9¬3j?¤:idI"E9f40af813bc551e2f2df26fe1e5a6284d71149196f3b6e2df2d363ab60379ad3;F:
+mtimel+»X

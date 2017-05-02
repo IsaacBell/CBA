@@ -1,0 +1,90 @@
+{:uriI"£file://app/assets/less/javascripts/codemirror/demo/spanaffectswrapping_shim.html?type=text/html&id=893c61a36c7dc1a436fb874230ff7596ded21f9b3763a0ebffff3a2b2d963f8c:ET:load_pathI"app/assets/less;T:filenameI"Napp/assets/less/javascripts/codemirror/demo/spanaffectswrapping_shim.html;T:	nameI"9javascripts/codemirror/demo/spanaffectswrapping_shim;T:logical_pathI">javascripts/codemirror/demo/spanaffectswrapping_shim.html;T:content_typeI"text/html;T:sourceI"É<!doctype html>
+
+<title>CodeMirror: Automatically derive odd wrapping behavior for your browser</title>
+<meta charset="utf-8"/>
+<link rel=stylesheet href="../doc/docs.css">
+
+<div id=nav>
+  <a href="http://codemirror.net"><img id=logo src="../doc/logo.png"></a>
+
+  <ul>
+    <li><a href="../index.html">Home</a>
+    <li><a href="../doc/manual.html">Manual</a>
+    <li><a href="https://github.com/marijnh/codemirror">Code</a>
+  </ul>
+  <ul>
+    <li><a class=active href="#">Automatically derive odd wrapping behavior for your browser</a>
+  </ul>
+</div>
+
+<article>
+<h2>Automatically derive odd wrapping behavior for your browser</h2>
+
+
+    <p>This is a hack to automatically derive
+    a <code>spanAffectsWrapping</code> regexp for a browser. See the
+    comments above that variable
+    in <a href="../lib/codemirror.js"><code>lib/codemirror.js</code></a>
+    for some more details.</p>
+
+    <div style="white-space: pre-wrap; width: 50px;" id="area"></div>
+    <pre id="output"></pre>
+
+    <script id="script">
+      var a = document.getElementById("area"), bad = Object.create(null);
+      var chars = "a~`!@#$%^&*()-_=+}{[]\\|'\"/?.>,<:;", l = chars.length;
+      for (var x = 0; x < l; ++x) for (var y = 0; y < l; ++y) {
+        var s1 = "foooo" + chars.charAt(x), s2 = chars.charAt(y) + "br";
+        a.appendChild(document.createTextNode(s1 + s2));
+        var h1 = a.offsetHeight;
+        a.innerHTML = "";
+        a.appendChild(document.createElement("span")).appendChild(document.createTextNode(s1));
+        a.appendChild(document.createElement("span")).appendChild(document.createTextNode(s2));
+        if (a.offsetHeight != h1)
+          bad[chars.charAt(x)] = (bad[chars.charAt(x)] || "") + chars.charAt(y);
+        a.innerHTML = "";
+      }
+
+      var re = "";
+      function toREElt(str) {
+        if (str.length > 1) {
+          var invert = false;
+          if (str.length > chars.length * .6) {
+            invert = true;
+            var newStr = "";
+            for (var i = 0; i < l; ++i) if (str.indexOf(chars.charAt(i)) == -1) newStr += chars.charAt(i);
+            str = newStr;
+          }
+          str = str.replace(/[\-\.\]\"\'\\\/\^a]/g, function(orig) { return orig == "a" ? "\\w" : "\\" + orig; });
+          return "[" + (invert ? "^" : "") + str + "]";
+        } else if (str == "a") {
+          return "\\w";
+        } else if (/[?$*()+{}[\]\.|/\'\"]/.test(str)) {
+          return "\\" + str;
+        } else {
+          return str;
+        }
+      }
+
+      var newRE = "";
+      for (;;) {
+        var left = null;
+        for (var left in bad) break;
+        if (left == null) break;
+        var right = bad[left];
+        delete bad[left];
+        for (var other in bad) if (bad[other] == right) {
+          left += other;
+          delete bad[other];
+        }
+        newRE += (newRE ? "|" : "") + toREElt(left) + toREElt(right);
+      }
+
+      document.getElementById("output").appendChild(document.createTextNode("Your regexp is: " + (newRE || "^$")));
+    </script>
+  </article>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"\file-digest://app/assets/less/javascripts/codemirror/demo/spanaffectswrapping_shim.html;TTF:charsetI"
+utf-8;F:digest"%v:¹ïq«¼º¦ÎOíçœ<ý¶LWe¥ná1€?ž:lengthiÉ:dependencies_digest"%Nž²¿ŸÂ3…P*ÇÜMèâHJ'Sà¼äÆb£¶€…‚™:idI"E893c61a36c7dc1a436fb874230ff7596ded21f9b3763a0ebffff3a2b2d963f8c;F:
+mtimel+»X

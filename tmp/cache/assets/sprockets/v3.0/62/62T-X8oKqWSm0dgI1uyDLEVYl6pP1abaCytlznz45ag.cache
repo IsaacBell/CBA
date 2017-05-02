@@ -1,0 +1,34 @@
+{:uriI"file://app/assets/javascripts/select2/composer.json?type=application/json&id=0e370275cc9550f1cafb76f88b94ff19aca8c82f047af6552e6ab0932da6928d:ET:load_pathI"app/assets/javascripts;T:filenameI"1app/assets/javascripts/select2/composer.json;T:	nameI"select2/composer;T:logical_pathI"select2/composer.json;T:content_typeI"application/json;T:sourceI"}{
+  "name":
+  "ivaynberg/select2",
+  "description": "Select2 is a jQuery based replacement for select boxes.",
+  "version": "3.5.2",
+  "type": "component",
+  "homepage": "http://ivaynberg.github.io/select2/",
+  "license": "Apache-2.0",
+  "require": {
+    "robloach/component-installer": "*",
+    "components/jquery": ">=1.7.1"
+  },
+  "extra": {
+    "component": {
+      "scripts": [
+        "select2.js"
+      ],
+      "files": [
+        "select2.js",
+        "select2_locale_*.js",
+        "select2.css",
+        "select2-bootstrap.css",
+        "select2-spinner.gif",
+        "select2.png",
+        "select2x2.png"
+      ]
+    }
+  }
+}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"@processors:type=application/json&file_type=application/json;TTI"?file-digest://app/assets/javascripts/select2/composer.json;TTF:charsetI"
+utf-8;F:digest"%ûâŞV˜G­—KÅd¨˜7S`İ‡¿“`'úú{Øî:lengthi}:dependencies_digest"%ª€UE²?{Ç­·…AúìáÊ¿›ğQH.Hiÿî:idI"E0e370275cc9550f1cafb76f88b94ff19aca8c82f047af6552e6ab0932da6928d;F:
+mtimel+_iX

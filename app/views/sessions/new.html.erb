@@ -1,0 +1,46 @@
+<section class="site-section-top">
+  <div class="bg-img" style="background-image: url('/assets/img/presidentsmansion01_1920.jpg');">
+    <div class="container site-content">
+      <div class="site-heading-bg-primary">
+        <h1>Corporate Partnerships</h1>
+      </div> <!-- .site-heading-bg -->
+    </div> <!-- .container -->
+  </div> <!-- .site-section-bg -->
+</section>
+
+<section class="site-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <%= render 'corporate_partners/sidebar_navigation' %>
+      </div> <!-- .col-md-3 -->
+
+      <div class="col-md-9">
+        <h1>Login</h1>
+        <div class="col-md-6">
+        <%= simple_form_for(:session, url: session_login_path) do |f| %>
+
+            <%= f.input :email %>
+            <%= f.input :password %>
+            <%= f.button :submit, 'Submit'%>
+
+        <% end %>
+        </div>
+        <div class="col-md-6">
+
+
+          <div class="content-box bg-light box-bordered" style="text-align:center;">
+            <h4>Not a Corporate Partner?</h4>
+            <p></p>
+            <a href="/corporate-partners/signup" class="btn btn-crimson btn-lg">Register Today</a>
+            <p></p>
+            <p></p>
+          </div> <!-- .content-box -->
+
+
+        </div>
+
+      </div>
+    </div> <!-- .row -->
+  </div> <!-- .container -->
+</section>

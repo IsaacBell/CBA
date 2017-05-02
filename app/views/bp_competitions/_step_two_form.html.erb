@@ -1,0 +1,62 @@
+<%= simple_form_for @summary,:method => :post, :url => complete_step_two_path, html: { class: 'form-horizontal' },
+                    wrapper: :horizontal_form,
+                    wrapper_mappings: {
+                        check_boxes: :horizontal_radio_and_checkboxes,
+                        radio_buttons: :horizontal_radio_and_checkboxes,
+                        file: :horizontal_file_input,
+                        boolean: :horizontal_boolean
+                    } do |f| %>
+    <p><%= f.input :pname, :required => true, :label => "Primary Contact Name:" %></p>
+    <p><%= f.input :pemail, :required => true, :label => "Primary Contact Email:", placeholder: 'user@domain.com' %> </p>
+    <p><%= f.input :pphone, :required => true, :label => "Primary Contact Phone:" %>
+    <h3>Additional Team Members</h3>
+    <p><%= f.input :t1name, :label => "(1) Name:" %></p>
+    <p><%= f.input :t1phone, :label => "(1) Phone:" %> </p>
+    <p><%= f.input :t1email, :label => "(1) Email:", placeholder: 'user@domain.com' %> </p>
+    <p></p>
+    <p><%= f.input :t2name, :label => "(2) Name:" %></p>
+    <p><%= f.input :t2phone, :label => "(2) Phone:" %> </p>
+    <p><%= f.input :t2email, :label => "(2) Email:", placeholder: 'user@domain.com' %> </p>
+    <p></p>
+    <p><%= f.input :t3name, :label => "(3) Name:" %></p>
+    <p><%= f.input :t3phone, :label => "(3) Phone:" %></p>
+    <p><%= f.input :t3email, :label => "(3) Email:", placeholder: 'user@domain.com' %></p>
+    <hr>
+    <h3>Faculty Advisor - Contact Information</h3>
+    <p>Who is your faculty advisor?</p>
+    <p><%= f.input :fname, :label => "Name:" %></p>
+    <p><%= f.input :fschool, :label => "School:" %></p>
+    <p><%= f.input :femail, :label => "Email:", placeholder: 'user@domain.com' %></p>
+    <p><%= f.input :fphone, :label => "Phone:" %></p>
+    <p>If you do not have an advisor, leave this section blank.  We will provide you with assistance.</p>
+    <hr>
+    <h3>Business / Idea Information </h3>
+    <p>Note that if you do not have some of this information complete yet, simply leave the section blank. </p>
+    <p><%= f.input :businessname, placeholder: "Business Name", :label => false %></p>
+    <p></p>
+    <p><%= f.input :bsummary, :label => "", placeholder: 'Please provide a brief introduction / summary of the business.', :label => false %></p>
+    <p><%= f.input :bproblem, :label => "", placeholder: 'Describe the problem your business is trying to solve.', :label => false %></p>
+    <p><%= f.input :bdesc, :label => "", placeholder: 'Describe your product or service, including current stage of development.', :label => false %></p>
+    <p><%= f.input :btarget, :label => "", placeholder: 'Summarize what you know about your target market.', :label => false %></p>
+    <p><%= f.input :bmarketing, :label => "", placeholder: 'Briefly describe your ideas for marketing and selling your product. ', :label => false %></p>
+    <p><%= f.input :bfinancials, :label => "", :label => false, :input_html => {:rows => 3}, placeholder: 'Provide an indication of your financials; when would you first collect revenue and when do you think you would be cash flow positive?  If you are seeking funding, how much do you need and when?  What are your major start-up expenses? ' %></p>
+    <p><%= f.input :bhistory, :label => "", :label => false, :input_html => {:rows => 3}, placeholder: 'If your business is currently up and running, provide us with some history (e.g., start-up date, critical milestones, number of employees, current revenue, etc.). ' %></p>
+    <p><%= f.input :bwebsite, placeholder: 'Do you have a website? If so, provide URL:', :label => false %></p>
+    <p><%= f.input :bplans, :label => "", :label => false, placeholder: 'How would you use the prize money if your team were to win? ' %></p>
+    <p>Are you interested in competing for the Grand Prize?
+      <br>Note that the Grand Prize is only awarded to a business (vs. to an individual), and the money must be used to fund the business’ growth.  </p>
+    <p><%= f.input :bgrandprize,
+                   :collection => [[true, 'Yes'], [false, 'No']],
+                   :label => false,
+                   :label_method => :last,
+                   :value_method => :first,
+                   :as => :radio_buttons,
+                   :item_wrapper_class => 'inline',
+                   :checked => true %></p>
+    <div>
+      </br>
+      <%= recaptcha_tags %>
+      </br>
+      <%= f.button :submit, 'Submit Information', :class=> "btn-crimson btn-md" %>
+    </div>
+<% end %>

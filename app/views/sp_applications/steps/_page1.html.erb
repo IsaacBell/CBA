@@ -1,0 +1,7 @@
+<%= f.input :firstname, :required => true, :label => 'First Name'  %>
+<%= f.input :middleinitial, :label => 'Middle Initial', input_html: { maxlength: 1 }  %>
+<%= f.input :lastname, :required => true, :label => 'Last Name'  %>
+<%= f.input :preferredname, :required => true, :label => 'Preferred Name'  %>
+<%= f.input :maddress, :required => true, :label => 'Mailing Address'  %>
+<%= f.input :city, :required => true, :label => 'City', collection: CS.cities(:al, :us) %>
+<%= f.input :state, :required => true, :label => 'State', collection: CS.states(:us), priority: [ 'AL' ], include_blank: false %>

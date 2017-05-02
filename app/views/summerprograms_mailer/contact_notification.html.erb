@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+
+  <body>
+    <h1>Summer Programs Contact</h1>
+
+    <h2>Subject: <%= @sp_contact.subject if @sp_contact.subject.present? %></h2> <br>
+
+    <p>
+      Name:  <%= "#{@sp_contact.first_name} " "#{@sp_contact.last_name}" %>
+    </p>
+    <p>
+      Email: <%= @sp_contact.email if @sp_contact.email.present? %>
+    </p>
+
+    <p>
+      Message: <%= @sp_contact.message if @sp_contact.message.present? %>
+    </p>
+  
+  </body>
+</html>

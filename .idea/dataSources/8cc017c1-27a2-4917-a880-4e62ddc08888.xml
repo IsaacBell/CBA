@@ -1,0 +1,73 @@
+<dataSource name="Rails culverhouse-web: test">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="C2016_test">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="aciir_db" />
+    <schema id="3" name="adf098324kjfa03423f0234apwp" />
+    <schema id="4" name="C2016tech_development" />
+    <schema id="5" name="C2016tech_test" />
+    <schema id="6" name="c2016v2_development" />
+    <schema id="7" name="c2016v2_test" />
+    <schema id="8" name="C2016_development" />
+    <schema id="9" name="cba" />
+    <schema id="10" name="cms_development" />
+    <schema id="11" name="cms_test" />
+    <schema id="12" name="culverhouse_development" />
+    <schema id="13" name="culverhouse_test" />
+    <schema id="14" name="information_schema" />
+    <schema id="15" name="ldaptest_development" />
+    <schema id="16" name="ldaptest_test" />
+    <schema id="17" name="mamanoesv2_development" />
+    <schema id="18" name="mamanoesv2_test" />
+    <schema id="19" name="mysql" />
+    <schema id="20" name="onebody_dev" />
+    <schema id="21" name="onebody_test" />
+    <schema id="22" name="performance_schema" />
+    <schema id="23" name="rdp_development" />
+    <schema id="24" name="rdp_test" />
+    <schema id="25" name="simple_cms_development" />
+    <schema id="26" name="simple_cms_test" />
+    <schema id="27" name="tech" />
+    <schema id="28" name="tech2016_development" />
+    <schema id="29" name="tech2016_test" />
+    <schema id="30" name="carrierwave_test_development" />
+    <schema id="31" name="carrierwave_test_test" />
+    <schema id="32" name="cba_current" />
+    <schema id="33" name="CCCAlumni2_development" />
+    <schema id="34" name="CCCAlumni2_test" />
+    <schema id="35" name="cnewapp_development" />
+    <schema id="36" name="cnewapp_test" />
+    <schema id="37" name="culverhouse_staging_development" />
+    <schema id="38" name="culverhouse_staging_test" />
+    <schema id="39" name="dapperdan_development" />
+    <schema id="40" name="dapperdan_test" />
+    <schema id="41" name="final_development" />
+    <schema id="42" name="final_test" />
+    <schema id="43" name="launch2_development" />
+    <schema id="44" name="launch2_test" />
+    <schema id="45" name="launch_development" />
+    <schema id="46" name="launch_test" />
+    <schema id="47" name="ldapper_development" />
+    <schema id="48" name="ldapper_test" />
+    <schema id="49" name="ldap_app_development" />
+    <schema id="50" name="ldap_app_test" />
+    <schema id="51" name="ldap_development" />
+    <schema id="52" name="ldap_from_scratch_development" />
+    <schema id="53" name="ldap_from_scratch_test" />
+    <schema id="54" name="ldap_test" />
+    <schema id="55" name="manderson_cas_development" />
+    <schema id="56" name="manderson_cas_test" />
+    <schema id="57" name="quickldap_development" />
+    <schema id="58" name="quickldap_test" />
+    <schema id="59" name="rdp_production" />
+    <schema id="60" name="simplecms_development" />
+    <schema id="61" name="simplecms_test" />
+    <schema id="62" name="students" />
+    <schema id="63" name="tedh" />
+    <schema id="64" name="tom_hanks_development" />
+    <schema id="65" name="tom_hanks_test" />
+    <schema id="66" name="toy_app_development" />
+    <schema id="67" name="toy_app_test" />
+  </database-model>
+</dataSource>

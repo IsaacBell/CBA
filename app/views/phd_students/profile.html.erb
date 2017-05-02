@@ -1,0 +1,89 @@
+<div class="breadcrumb-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <h1 class="breadcrumb-page-title">
+          <%= @profile.name %> Profile
+        </h1>
+      </div> <!-- .col-md-6 -->
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <ol class="breadcrumb">
+          <li><%= link_to 'PhD Students', '/phd_students' %></li>
+          <li>
+            PhD Student Profile
+          </li>
+        </ol>
+      </div> <!-- .col-md-6 -->
+    </div> <!-- .row -->
+  </div> <!-- .container -->
+</div>
+
+<section class="site-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="content-box box-img bg-light">
+          <div class="row no-gutter">
+            <div class="col-md-3 margin-top-10">
+              <% if @profile.photo.present? %>
+                  <%= image_tag @profile.photo.resized.url, class:'img-responsive profile_pic', size: '255x280', alt: '@profile.name' %>
+              <% else %>
+                  <%= image_tag('/assets/no-pic.png', class: 'img-responsive profile_pic', size: '263x263', alt: 'The University of Alabama') %>
+              <% end %>
+            </div> <!-- .col-md-3 -->
+
+            <div class="col-md-9">
+              <div class="box-body" style="padding:10px;">
+                <h2 class="margin-bottom-5">
+                  <%= @profile.name %>
+                </h2>
+                <h4>
+                  <%= @profile.descriptor if @profile.descriptor.present? %>
+                </h4>
+
+                <p style="font-weight: bold;">
+                  <% @profile.program if @profile.program.present? %> <br>
+                </p>
+
+
+                <div class="divider-light faded-right"></div>
+
+                Email: <%= mail_to @profile.email %>
+                <br>
+
+                <%= link_to 'CV<br>'.html_safe, @profile.cv, target: "_blank" if @profile.cv? %>
+
+                <%= link_to 'Paper<br>'.html_safe, @profile.jmpaper, target: "_blank" if @profile.jmpaper? %>
+
+                <div class="divider-light faded-right"></div>
+
+                <% if @profile.bio.present? %>
+
+                    <h3>Biography</h3>
+
+                    <%= @profile.bio.html_safe %>
+
+                    <div class="divider-light faded-right"></div>
+
+                <% end %>
+
+                <% if @profile.honors.present? %>
+
+                    <h3>Honors</h3>
+
+                    <%= @profile.honors.html_safe %>
+
+                    <div class="divider-light faded-right"></div>
+
+                <% end %>
+                
+              </div> <!-- .box-body -->
+            </div> <!-- .col-md-9 -->
+          </div> <!-- .row -->
+        </div> <!-- .content-box -->
+
+      </div>
+    </div>
+  </div>
+</section>

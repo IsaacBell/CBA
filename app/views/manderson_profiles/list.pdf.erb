@@ -1,0 +1,145 @@
+<h1 style="text-align:center;"></h1>
+<h3 style="text-align:center;">Culverhouse Partners Contact List</h3>
+
+<% @profiles.each do |profile| %>
+
+    <h3 class="margin-bottom-5">
+      <%= profile.first_name %>  <%= profile.last_name %> —
+      <small>
+        <%= profile.grad_class %> / <%= profile.candidate_type %>
+      </small>
+    </h3>
+
+    <div class="divider-light faded-right"></div>
+
+    <p>
+      <strong>Undergraduate School:</strong> <%= profile.ug_school.html_safe %>
+    </p>
+    <p>
+      <strong>Undergraduate Degree:</strong> <%= profile.ug_degree.html_safe %>
+    </p>
+    <p>
+      <strong>Undergraduate Year:</strong>  <%= profile.ug_year.html_safe %>
+    </p>
+
+    <!-- <ul class="list-inline icon-social icon-social-bg icon-primary rounded no-side-spacing">
+      <li>
+        <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+      </li>
+      <li>
+        <a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
+      </li>
+      <li>
+        <a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+      </li>
+      <li>
+        <a href="#" title="Vimeo"><i class="fa fa-vimeo-square"></i></a>
+      </li>
+      <li>
+        <a href="#" title="YouTube"><i class="fa fa-youtube-play"></i></a>
+      </li>
+    </ul> -->
+
+    <a href="tel:<%= profile.phone %>" class="btn btn-transparent-v2"><i class="fa fa-phone margin-right-10"></i> Call</a>
+    <a href="mailto:<%= profile.email %>" class="btn btn-transparent-v2"><i class="fa fa-envelope margin-right-10"></i> Email</a>
+    <% if profile.manderson_profile_cv? %>
+        <%= link_to profile.manderson_profile_cv.file.url, class: "btn btn-transparent-v2" do %>
+            <i class="fa fa-envelope margin-right-10"></i>Resume
+        <% end %>
+    <% else %>
+
+    <% end %>
+
+    <div class="divider-light faded-right"></div>
+
+    <% unless profile.work_experience.blank? %>
+
+        <h3>Work Experience</h3>
+
+        <%= profile.work_experience.html_safe %>
+
+        <div class="divider-light faded-right"></div>
+
+    <% end %>
+
+    <% unless profile.activities_honors.blank? %>
+
+        <h3>Activities & Honors</h3>
+
+        <%= profile.activities_honors.html_safe %>
+
+        <div class="divider-light faded-right"></div>
+
+    <% end %>
+
+    <% unless profile.volunteerism.blank? %>
+
+        <h3>Volunteerism</h3>
+
+        <%= profile.volunteerism.html_safe %>
+
+        <div class="divider-light faded-right"></div>
+
+    <% end %>
+
+    <% unless profile.internship.blank? %>
+
+        <h3>Internship Information</h3>
+
+        <%= profile.internship.html_safe %>
+
+        <div class="divider-light faded-right"></div>
+
+    <% end %>
+
+    <% unless profile.cskills.blank? %>
+
+        <h3>Computer Skills</h3>
+
+        <%= profile.cskills.html_safe %>
+
+        <div class="divider-light faded-right"></div>
+
+    <% end %>
+
+    <% unless profile.favorite_book.blank? %>
+
+        <h3>What is Your Favorite Book?</h3>
+
+        <%= profile.favorite_book.html_safe %>
+
+        <div class="divider-light faded-right"></div>
+
+    <% end %>
+
+    <% unless profile.favorite_quote.blank? %>
+
+        <h3>What is Your Favorite Quote?</h3>
+
+        <%= profile.favorite_quote.html_safe %>
+
+        <div class="divider-light faded-right"></div>
+
+    <% end %>
+
+    <% unless profile.three_word_description.blank? %>
+
+        <h3>Describe Yourself in 3 words.</h3>
+
+        <%= profile.three_word_description.html_safe %>
+
+        <div class="divider-light faded-right"></div>
+
+    <% end %>
+
+    <% unless profile.something_unique.blank? %>
+
+        <h3>What is something unique about you?</h3>
+
+        <%= profile.something_unique.html_safe %>
+
+    <% end %>
+
+    <p style='page-break-after:always;'></p>
+    
+<% end %>

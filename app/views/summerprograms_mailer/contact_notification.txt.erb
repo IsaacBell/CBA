@@ -1,0 +1,12 @@
+Summer Programs Contact
+
+Subject: <%= @sp_contact.subject if @sp_contact.subject.present? %>
+
+Name:  <%= "#{@sp_contact.first_name} " "#{@sp_contact.last_name}" %>
+
+Email: <%= @sp_contact.email if @sp_contact.email.present? %>
+
+Message: <%= @sp_contact.message if @sp_contact.message.present? %>
+
+===============================================
+

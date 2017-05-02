@@ -1,0 +1,8 @@
+AuthType Basic
+AuthName "CLDC Online Resource"
+AuthUserFile /home/vhosts/eblasts/cldc/resources/.htpasswd
+Require valid-user
+
+RewriteEngine On
+RewriteCond %{TIME_YEAR}%{TIME_MON}%{TIME_DAY}%{TIME_HOUR} >2016013006
+RewriteRule ^$ http://culverhouse.ua.edu/cldc/ [R=301,L]

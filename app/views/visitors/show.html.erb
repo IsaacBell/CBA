@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @visitor.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @visitor.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @visitor.price %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @visitor.quantity %>
+</p>
+
+<p>
+  <strong>Category names:</strong>
+  <%= @visitor.categories.map(&:name).join(", ") %>
+</p>
+
+<p>
+  <strong>Available at:</strong>
+  <%= @visitor.available_at %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @visitor.tags %>
+</p>
+
+
+<%= link_to 'Edit', edit_visitor_path(@visitor) %> |
+<%= link_to 'Back', visitors_path %>

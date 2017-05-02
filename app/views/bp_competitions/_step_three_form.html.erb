@@ -1,0 +1,22 @@
+<%= simple_form_for @preso,:method => :post, :url => complete_step_three_path, html: { class: 'form-horizontal' },
+                    wrapper: :horizontal_form,
+                    wrapper_mappings: {
+                        check_boxes: :horizontal_radio_and_checkboxes,
+                        radio_buttons: :horizontal_radio_and_checkboxes,
+                        file: :horizontal_file_input,
+                        boolean: :horizontal_boolean
+                    } do |f| %>
+    <p><%= f.input :pname, :required => true, :label => "Primary Contact Name:" %></p>
+    <p><%= f.input :pemail, :required => true, :label => "Primary Contact Email:", placeholder: 'user@domain.com' %> </p>
+    <p><%= f.input :pphone, :required => true, :label => "Primary Contact Phone:" %>
+    <h3>Presentation Upload</h3>
+    <p>Only PowerPoint or PDF files are allowed. </p>
+    <p><%= f.input :preso, :label => "Presentation File" %></p>
+
+    <div>
+      </br>
+      <%= recaptcha_tags %>
+      </br>
+      <%= f.button :submit, 'Submit PowerPoint', :class=> "btn-crimson btn-md" %>
+    </div>
+<% end %>

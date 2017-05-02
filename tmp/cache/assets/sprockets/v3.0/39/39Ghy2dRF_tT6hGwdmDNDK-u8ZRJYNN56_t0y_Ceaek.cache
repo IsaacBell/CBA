@@ -1,0 +1,17 @@
+{:uriI"≠file://app/assets/less/javascripts/ckeditor/plugins/jsplus_button/dialog/jscolor/demo.html?type=text/html&id=8a0ef4beb44fd64abf7c5dc39832d49d3646dbde921d9a60fbb6fead17512fb5:ET:load_pathI"app/assets/less;T:filenameI"Xapp/assets/less/javascripts/ckeditor/plugins/jsplus_button/dialog/jscolor/demo.html;T:	nameI"Cjavascripts/ckeditor/plugins/jsplus_button/dialog/jscolor/demo;T:logical_pathI"Hjavascripts/ckeditor/plugins/jsplus_button/dialog/jscolor/demo.html;T:content_typeI"text/html;T:sourceI"∫<html>
+<head>
+	<title>jscolor demo</title>
+</head>
+<body>
+
+	<script type="text/javascript" src="jscolor.js"></script>
+
+	Click here: <input class="color" value="66ff00">
+
+</body>
+</html>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"ffile-digest://app/assets/less/javascripts/ckeditor/plugins/jsplus_button/dialog/jscolor/demo.html;TTF:charsetI"
+utf-8;F:digest"%˝35vEtHR1)Fw¬ƒèß)üΩûñ1ôIkP˙÷≠:lengthi∫:dependencies_digest"%Ä∫¡{7Lßø;¢«ûvö∂óP )=÷aq/9¨3j?§:idI"E8a0ef4beb44fd64abf7c5dc39832d49d3646dbde921d9a60fbb6fead17512fb5;F:
+mtimel+ªX

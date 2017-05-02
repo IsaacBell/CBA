@@ -1,0 +1,14 @@
+<%= f.hidden_field :current_step, value: f.object.current_step %>
+
+<%= render "sp_applications/steps/page#{f.object.current_step + 1}", f: f %>
+
+<div class="field">
+  <%= f.submit "Back", name: "back_button" unless f.object.first_step? %>
+
+  <% if f.object.last_step? %>
+      <%= f.submit nil %>
+  <% else %>
+      <%= f.submit 'Next' %>
+  <% end %>
+</div>
+

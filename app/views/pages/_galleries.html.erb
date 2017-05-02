@@ -1,0 +1,29 @@
+<style>
+  .mt4 {
+    margin-top: 4px;
+  }
+</style>
+<script>
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true,
+        'albumLabel': "Image %1 of %2"
+    })
+</script>
+<div class="row" style="">
+  <div class="image-set">
+    <% if section.galleries.count.between?(0, 4) %>
+        <% gallery_class = 'col-md-6' %>
+    <% else %>
+        <% gallery_class = 'col-md-2 mt4' %>
+    <% end %>
+
+    <% section.galleries.sorted.each do |g| %>
+
+          <%= link_to g.image.gallery.url, :class => gallery_class, data: { lightbox: "#{section.title}", title: "#{g.title}" } do %>
+              <%= image_tag(g.image.gallery.url, :class => "img-fluid", :size => "170x130") %>
+          <% end %>
+        
+    <% end %>
+  </div>
+</div>

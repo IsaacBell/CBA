@@ -1,0 +1,45 @@
+<section class="site-section-top">
+  <div class="bg-img" style="background-image: url('/assets/img/presidentsmansion01_1920.jpg');">
+    <div class="container site-content">
+      <div class="site-heading-bg-primary">
+        <h1>Manderson Student Profiles</h1>
+      </div> <!-- .site-heading-bg -->
+    </div> <!-- .container -->
+  </div> <!-- .site-section-bg -->
+</section>
+
+<section class="site-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <%= render 'corporate_partners/sidebar_navigation' %>
+      </div> <!-- .col-md-3 -->
+      <div class="col-md-9">
+
+        Filters:  <%= link_to 'All', manderson_profiles_path %> | <%= link_to 'MBA', manderson_profiles_path(:candidate_type=>0) %> | <%= link_to 'STEM Path to the MBA', manderson_profiles_path(:candidate_type=>1) %>  | <%= link_to 'CREATE Path to the MBA', manderson_profiles_path(:candidate_type=>2) %>  | <%= link_to 'University Scholar', manderson_profiles_path(:candidate_type=>3) %>
+        <div class="row">
+
+      <% @profiles.each do |profile| %>
+          <div class="col-md-3" style="height:290px;">
+            <div class="content-box box-img bg-light text-center">
+
+              <% if profile.manderson_profile_photo? %>
+                  <%= image_tag profile.manderson_profile_photo.directory, class:'img-responsive directory-thumbnail', size: '125x125', alt: profile.first_name, :style => "margin:auto;" %>
+              <% else %>
+                  <%= image_tag('/assets/no-pic.png', class: 'img-responsive directory-thumbnail', size: '125x125', alt: 'The University of Alabama', :style => "margin:auto;") %>
+              <% end %>
+
+              <div class="box-body">
+                <h4 class="no-bottom-spacing"><%= profile.first_name %>  <%= profile.last_name %></h4>
+                <small><%= profile.grad_class %> <br><%= profile.candidate_type %></small>
+
+                <p class="small"> <a href="<%= student_profile_path(profile) %>" class="btn btn-transparent-v2"> View Profile</a></p>
+              </div> <!-- .box-body -->
+            </div> <!-- .content-box -->
+          </div> <!-- .col-md-3 -->
+      <% end %>
+      </div>
+        <%= will_paginate @profiles %>
+    </div> <!-- .row -->
+  </div>
+  </section>

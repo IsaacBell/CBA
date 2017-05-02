@@ -1,0 +1,244 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+
+@import "bootstrap";
+@import "bootstrap-submenu.min";
+@import "style.min";
+@import "owl.carousel.min";
+@import "owl.theme.default.min";
+@import "custom";
+@import "bootstrap-datetimepicker.min";
+
+
+@media (min-width: 768px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+}
+
+ul.dropdown-menu.left {
+  left: auto !important;
+}
+
+
+.dropdown-menu>li>a {
+  margin-right: 20px;
+}
+.dropdown-menu>li>a:hover {
+  background: none;
+  font-weight: bold;
+}
+
+
+@media (max-width: 767px) {
+  .navbar .navbar-collapse {
+    text-align: left;
+  }
+  .navbar-collapse {
+    max-height: none;
+  }
+
+}
+
+.sub-breadcrumbs {
+  background-color: #f3f3f3;
+  border-bottom: solid 1px #c6c6c6;
+  text-align: center;
+}
+
+.video-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  min-height: 600px;
+  max-height: 600px;
+}
+
+.video-time-left {
+  top: 180px;
+  position: absolute;
+  left: 20%;
+  right: 60%;
+  text-align: left;
+  width: 100px;
+}
+
+.video-time-right {
+  top: 180px;
+  position: absolute;
+  left: 60%;
+  right: 20%;
+  text-align: right;
+  width: 100px;
+}
+
+.video-caption-inner {
+  background: rgba(0,0,0,0.55);
+  padding: 18px 22px 20px 22px;
+  margin: 0;
+  width: auto;
+  display: inline-block;
+  border-radius: 4px;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  text-align: center;
+
+}
+
+.embed-responsive {
+  min-height: 250px !important;
+  max-height: 800px !important;
+}
+
+.collapse-panel {
+  display: block;
+  width: 100%;
+}
+
+.collapse-panel h6 {
+  width: 100%;
+  cursor: pointer;
+}
+
+.collapse-panel h6 a {
+  display: block;
+}
+
+.collapse-panel .panel-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all .2s ease;
+}
+
+.collapse-panel.active .panel-content {
+  max-height: 1000px;
+}
+
+.collapse-panel .panel-content {
+  display: none;
+}
+
+.collapse-panel.active .panel-content {
+  display: block;
+}
+
+
+.site-top {
+  padding-bottom: 20px;
+  padding-top: 50px;
+}
+
+.site-content.crimson-banner {
+  padding: 50px 0 0px 0;
+}
+
+.site-content.grey-banner {
+  padding: 50px 0 0px 0;
+}
+
+.crimson-banner {
+  //margin: 0px 0 -150px 0;
+  //padding: 10px 0px;
+  text-align: center;
+  background-color: #900f0f;
+  //color: white;
+}
+
+.grey-banner {
+  text-align: center;
+  //color: #eeeeee;
+  background-color: rgb(130,138,143);
+}
+
+.ua-square-logo.overlap-top {
+  margin-top: -250px;
+}
+
+.social-tabs-content{height:600px !important;overflow-x:hidden;overflow-y:scroll;padding:15px}
+
+@media (min-width: 979px) {
+  ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: inline;
+  }
+
+}
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+  height: 100%;
+  margin: 0 auto -424px; /* the bottom margin is the negative value of the footer's height */
+}
+
+.push {
+  height: 424px; /* .push must be the same height as .footer */
+}
+
+/*******************  ABHOF ***********************/
+
+.abhof-header-main.header-light {
+  border-bottom: 1px solid #c6c6c6;
+  height: 160px;
+}
+
+.abhof-dropdown {
+  padding-top: 60px;
+}
+
+.site-top  {
+  // padding-bottom: 20px;
+  // margin-top: -60px;
+  margin-top: -20px;
+
+}
+
+footer.abhof {
+  color: #c6c6c6 !important;
+  border-top-color: #b4965a !important;
+  border-top: solid 5px #b4965a !important;
+}
+
+.abhof-wrapper {
+  min-height: 100%;
+  height: auto !important;
+  margin: 0 auto -261px;
+}
+
+.abhof-push {
+  height: 261px;
+}
+
+.ua-logo-college-cba {
+  color: #fff !important;
+}
+
+.directory-thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 0px !important;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: border .2s ease-in-out;
+  -o-transition: border .2s ease-in-out;
+  transition: border .2s ease-in-out;
+}
+
+.social-tabs-content{height:960px !important;overflow-x:hidden;overflow-y:scroll;padding:15px}

@@ -1,0 +1,17 @@
+{:uriI"¨file://app/assets/less/javascripts/ckeditor/plugins/jsplus_font_awesome/jscolor/demo.html?type=text/html&id=c7d4ca6484493bfa803a193ffd565884d3767918e2f0bfde87f0d88d863499fd:ET:load_pathI"app/assets/less;T:filenameI"Wapp/assets/less/javascripts/ckeditor/plugins/jsplus_font_awesome/jscolor/demo.html;T:	nameI"Bjavascripts/ckeditor/plugins/jsplus_font_awesome/jscolor/demo;T:logical_pathI"Gjavascripts/ckeditor/plugins/jsplus_font_awesome/jscolor/demo.html;T:content_typeI"text/html;T:sourceI"∫<html>
+<head>
+	<title>jscolor demo</title>
+</head>
+<body>
+
+	<script type="text/javascript" src="jscolor.js"></script>
+
+	Click here: <input class="color" value="66ff00">
+
+</body>
+</html>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"efile-digest://app/assets/less/javascripts/ckeditor/plugins/jsplus_font_awesome/jscolor/demo.html;TTF:charsetI"
+utf-8;F:digest"%˝35vEtHR1)Fw¬ƒèß)üΩûñ1ôIkP˙÷≠:lengthi∫:dependencies_digest"%Ä∫¡{7Lßø;¢«ûvö∂óP )=÷aq/9¨3j?§:idI"Ec7d4ca6484493bfa803a193ffd565884d3767918e2f0bfde87f0d88d863499fd;F:
+mtimel+ªX
